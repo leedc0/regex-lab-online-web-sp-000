@@ -11,7 +11,10 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.match(/^(A-Z)+$\W/)
+  text.match(/^[A-Z].*\W$/) # "^" Start of line; "[A-Z]" Any single character in the 
+                            # range A-Z; "." Any single character; "*" Zero or more
+                            # of "." (value just before); \W Any non-word
+                            # character; $ End of line -- no parenthesis included 
 end
 
 def valid_phone_number?(phone)
