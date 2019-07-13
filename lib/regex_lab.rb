@@ -20,6 +20,5 @@ end
 
 def valid_phone_number?(phone)
   phone.gsub(/\D/, '').length == 10 ? true : false
-  # phone.scan(/\A(\d{10})|(\d)     [\d+{10}]/) ? true : false
-  # phone.scan(\A(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\z)
+  # Remove all non-digit characters (\D) and test that the length is 10.
 end
